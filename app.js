@@ -19,7 +19,8 @@ var fechayhora = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear(
 
     } else {
 
-        if (file == "log.txt"){
+      
+        if (file == ".log.txt"){
             res.writeHead(403, {'Content-Type': 'text/plain'});
             res.end(err.Error);
             fs.appendFile('log.txt', fechayhora + ' | ' + req.url + ' - status: 403\n' , (err) => {
